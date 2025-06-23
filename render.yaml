@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: avax-signal-bot
+    env: python
+    region: frankfurt
+    buildCommand: ""
+    startCommand: "python avax_render_bot.py"
+    pythonVersion: 3.10.12  # <-- BURAYI EKLE
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        fromDotEnv: true
+      - key: TELEGRAM_CHAT_ID
+        fromDotEnv: true
+      - key: COINGLASS_API_KEY
+        fromDotEnv: true
+      - key: BINANCE_API_KEY
+        fromDotEnv: true
+      - key: BINANCE_API_SECRET
+        fromDotEnv: true
