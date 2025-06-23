@@ -29,8 +29,7 @@ def main_loop():
     while True:
         try:
             result = check_conditions()
-            send_telegram_message(f"🔍 Bot kontrolü yapıldı.
-Sonuç: {result}")
+            send_telegram_message(f"Kontrol yapıldı.\nSonuç: {result}")
         except Exception as e:
             logging.error(f"Main loop error: {e}")
         time.sleep(60)  # 1-minute interval
